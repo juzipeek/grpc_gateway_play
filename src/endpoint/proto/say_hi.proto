@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package endpoint;
+
+import "google/api/annotations.proto";
+
+message HiReq {
+    string name = 1;
+}
+
+message HiResp {
+    string echo = 2;
+}
+
+service SayHi {
+    rpc SayHi (HiReq) returns (HiResp) {
+        option (google.api.http) = {
+            post: "/api/sayhi"
+            body: "*"
+        };
+    }
+}
