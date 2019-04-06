@@ -52,3 +52,12 @@ protoc -I/usr/local/include -I. \
 ```bash
 curl -i -X POST -d '{"name":"jay"}' "http://localhost:8080/api/sayhi"
 ```
+
+## grpc middleware
+
+### 安装
+
+```bash
+go get -v github.com/grpc-ecosystem/go-grpc-middleware
+
+```

@@ -22,7 +22,7 @@ func main() {
 	
 	{
 		// grpc server
-		rpcServer := grpc.NewServer()
+		rpcServer := NewGrpcServer()
 		// 注册 grpc 处理函数
 		gw.RegisterSayHiServer(rpcServer, srv.NewSayHiSrv())
 		
